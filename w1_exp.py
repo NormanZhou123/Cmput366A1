@@ -24,8 +24,8 @@ def getOptimalAction():
     return int(RL_env_message("get optimal action"))
 
 def setoption(): # allow the user to choose from two options
-    option = input("\nPlease input you option('0'for epsilon=0 Q1=5, '1'for eosilon=0.1 Q1=0):")
-    RL_agent_message(option)
+    # option = input("\nPlease input you option('0'for epsilon=0 Q1=5, '1'for epsilon=0.1 Q1=0):")
+    RL_agent_message(0) # '0'for epsilon=0 Q1=5, '1'for epsilon=0.1 Q1=0
 
 if __name__ == "__main__":
     num_runs = 2000
