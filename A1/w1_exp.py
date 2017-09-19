@@ -23,7 +23,7 @@ def save_results(data, data_size, filename): # data: floating point, data_size: 
 def getOptimalAction():
     return int(RL_env_message("get optimal action"))
 
-def setoption():
+def setoption(): # allow the user to choose from two options
     option = input("\nPlease input you option('0'for epsilon=0 Q1=5, '1'for eosilon=0.1 Q1=0):")
     RL_agent_message(option)
 

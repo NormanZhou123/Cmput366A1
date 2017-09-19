@@ -16,8 +16,8 @@ last_action = None  # last_action: NumPy array
 
 num_actions = 10
 Q_a = None
-ini = 0
-epsilon = 0
+ini = 0 # initial value of Q_a
+epsilon = 0 # probability of the epsilon case
 
 
 def agent_init():
@@ -62,10 +62,10 @@ def agent_step(reward, this_observation):  # returns NumPy array, reward: floati
     option = np.random.choice(select_option, p=[epsilon, 1 - epsilon])
 
     if option == 0:
-        last_action[0] = rand_in_range(num_actions)
+        last_action[0] = rand_in_range(num_actions) # epsilon case
 
     else:
-        last_action[0] = np.argmax(Q_a)
+        last_action[0] = np.argmax(Q_a) # 1-epsilon case
 
     return last_action
 
